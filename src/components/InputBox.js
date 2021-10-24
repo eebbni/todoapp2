@@ -43,6 +43,11 @@ export const InputBox = ({todoList,setTodoList}) => {
     }
 
     const onClickBtn = () => {
+        if(!text)
+        {
+            alert('값을 다시 입력해주세요');
+            return false;
+        }
         const nextTodoList = todoList.concat({
             id: todoList.length,
             text : text,

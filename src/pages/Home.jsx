@@ -2,6 +2,7 @@ import React , {useState} from 'react';
 import {InputBox} from '../components/InputBox';
 import TodoItemList from '../components/ToDoItemList';
 import styled from 'styled-components';
+import {Count} from '../components/Count';
 
 const Homepage = styled.div`
     min-width : 480px;
@@ -16,6 +17,7 @@ const Home = () => {
 
     return (
         <Homepage>
+            <Count todoList={todoList}/>
             {/*투두 추가하는 인풋박스 */}
             <InputBox todoList={todoList} setTodoList={setTodoList}/>
              {/* 할일 목록 출력하는 리스트 
